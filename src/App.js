@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { Routes, Route, Navigate } from "react-router-dom";
+import Payment from "./Payment";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+
+        <Routes>
+
+            {/* Redirect localhost:3001 to localhost:3001/payment */}
+
+            <Route
+                path="/"
+                element={<Navigate to="/payment" replace />}
+            />
+
+            {/* Payment Page */}
+
+            <Route
+                path="/payment"
+                element={<Payment />}
+            />
+
+            {/* Payment Gateway */}
+
+            <Route
+                path="/payment/:gateway"
+                element={<Payment />}
+            />
+
+             {/* Catch-all: redirect unknown routes back to payment */}
+            <Route
+                path="*"
+                element={<Navigate to="/payment" replace />}
+            />
+
+        </Routes>
+
+    );
+
 }
 
 export default App;
