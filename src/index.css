@@ -1,0 +1,74 @@
+/* ============================================================
+   Design tokens
+   ============================================================ */
+:root {
+  --navy-950: #0a0f1f;
+  --navy-900: #10172e;
+  --navy-800: #1b2444;
+  --navy-700: #263061;
+
+  --emerald-600: #0e7c5a;
+  --emerald-500: #14966f;
+  --emerald-400: #22b489;
+
+  --gold-500: #c9a227;
+  --gold-400: #ddb943;
+
+  --paper: #fbfaf6;
+  --paper-dim: #f2f0e8;
+
+  --ink-900: #14171f;
+  --ink-600: #565c6e;
+  --ink-400: #8b90a0;
+
+  --line: #e7e3d8;
+  --line-soft: #efece2;
+
+  --danger: #b23a2e;
+  --danger-bg: #fbebe8;
+  --warn: #b4791f;
+  --warn-bg: #fbf1e0;
+  --success-bg: #e9f5ef;
+
+  --font-display: "Fraunces", "Iowan Old Style", ui-serif, Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+
+  --shadow-card: 0 30px 60px -20px rgba(10, 15, 31, 0.35),
+    0 10px 20px -10px rgba(10, 15, 31, 0.15);
+  --shadow-soft: 0 8px 20px -10px rgba(10, 15, 31, 0.25);
+
+  --radius-lg: 22px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--ink-900);
+  background: var(--navy-950);
+  font-variant-numeric: tabular-nums;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
